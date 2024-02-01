@@ -16,7 +16,7 @@ abstract class BaseViewModelImpl : ViewModel(),
 
     private val defaultScope = CoroutineScope(Dispatchers.Main)
     private val viewModelMainScope = CoroutineScope(Dispatchers.Main + mainJob)
-    private val viewModelIoScope = CoroutineScope(Dispatchers.Main + ioJob)
+    private val viewModelIoScope = CoroutineScope(Dispatchers.IO + ioJob)
 
     protected val ioScope: CoroutineScope
         get() {
